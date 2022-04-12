@@ -1,0 +1,23 @@
+name: Linter
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.18
+        
+    - name: Run linters
+      uses: wearerequired/lint-action@v1
+      with:
+        gofmt: true
+        
