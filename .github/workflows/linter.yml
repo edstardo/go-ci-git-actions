@@ -20,4 +20,6 @@ jobs:
       uses: wearerequired/lint-action@v1
       with:
         gofmt: true
-        
+    
+    - name: ECHO
+      run: echo "Lint Success!"
