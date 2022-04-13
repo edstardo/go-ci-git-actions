@@ -7,7 +7,7 @@ type Number interface {
 }
 
 func Sum[N Number](nums []N) N {
-		var sum N
+	var sum N
 	for _, n := range nums {
 		sum += n
 	}
